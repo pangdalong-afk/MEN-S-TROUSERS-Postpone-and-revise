@@ -95,6 +95,10 @@
 
   /* ---------- grid ---------- */
   .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.2vw,30px);}
+  /* 细节章：8 张卡，末行两张等分铺满 */
+  #s2 .grid{grid-template-columns:repeat(6,minmax(0,1fr));}
+  #s2 .grid > .card{grid-column:span 2;}
+  #s2 .grid > .card:nth-last-child(-n+2){grid-column:span 3;}
   .card{
     background:var(--paper-2);border:1px solid var(--line);display:flex;flex-direction:column;
     transition:box-shadow .32s,transform .32s,border-color .32s;
@@ -153,16 +157,6 @@
   .shot.fit img{object-fit:contain;}
   @media (max-width:680px){.shot.fit{aspect-ratio:3/4;}}
 
-  /* ---------- placeholder shot ---------- */
-  .ph-box{
-    position:relative;aspect-ratio:3/4;width:100%;display:grid;place-items:center;
-    background:repeating-linear-gradient(45deg,#f3ede3,#f3ede3 12px,#eee7db 12px,#eee7db 24px);
-  }
-  .ph-box span{
-    font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);
-    background:rgba(255,255,255,.88);padding:7px 14px;border-radius:999px;
-  }
-
   /* ---------- extra card ---------- */
   .card.ghost{background:transparent;border:1px dashed #d3c8b6;align-items:center;justify-content:center;text-align:center;}
   .card.ghost:hover{transform:none;box-shadow:none;}
@@ -194,9 +188,12 @@
 
   @media (max-width:1040px){
     .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    #s2 .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    #s2 .grid > .card,#s2 .grid > .card:nth-last-child(-n+2){grid-column:span 1;}
   }
   @media (max-width:680px){
     .grid{grid-template-columns:1fr;}
+    #s2 .grid{grid-template-columns:1fr;}
   }
   @media (max-width:900px){
     .hero-stats{grid-template-columns:1fr 1fr;}
@@ -370,7 +367,7 @@
       <p class="sub">版型与面料大体不动，只改局部工艺与配件（贴布绣、织带、腰头、裤脚等），上货最快、出错最少。基准款为军绿华夫格宽松长裤（松紧腰 + 白色抽绳），下面几个方向分别对应不同风格的男性客群。</p>
       <div class="chips">
         <span class="chip">织带</span><span class="chip">铆钉</span><span class="chip">贴布绣</span>
-        <span class="chip">章仔</span><span class="chip">烫画</span><span class="chip">纽扣</span>
+        <span class="chip">章仔</span><span class="chip">纽扣</span>
         <span class="chip">抽绳</span><span class="chip">裤脚</span><span class="chip">腰头</span>
         <span class="chip">口袋（拉链 / 无拉链 · 后袋 1–2 个）</span>
       </div>
@@ -485,25 +482,25 @@
       </div>
     </article>
     <article class="card">
-      <div class="ph-box"><span>实拍待补充</span></div>
+      <div class="shot" data-full="images/bz.webp" data-cap="章仔 · 大腿外侧椭圆布贴">
+        <img src="images/bz.webp" alt="章仔 · 大腿外侧椭圆布贴" loading="lazy" />
+        <span class="no">07</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 章仔车缝细节</span></div>
+      </div>
       <div class="card-body">
         <h4>章仔<small>Badge</small></h4>
-        <p>袋口、裤脚或后腰缝一枚皮革 / 织唛章仔，车缝固定，是小面积提升质感与品牌感最省成本的做法；章仔可做撞色，也可压同色暗章。</p>
+        <p>大腿外侧车缝一枚椭圆布贴章仔，同色系低调、撞色更醒目；袋口、裤脚或后腰也可以放同样的章仔，车缝固定，是小面积提升质感最省成本的做法。</p>
         <div class="kw"><span>皮革 / 织唛</span><span>小面积点缀</span><span>成本低</span></div>
       </div>
     </article>
-
     <article class="card">
-      <div class="ph-box"><span>实拍待补充</span></div>
-      <div class="card-body">
-        <h4>烫画<small>Heat Transfer</small></h4>
-        <p>字母、图标直接烫印在裤身或袋位，没有车缝线、上身轻薄不硌；可做哑光或反光，反光款夜间辨识度高。</p>
-        <div class="kw"><span>哑光 / 反光</span><span>无车缝线</span><span>牢度需实测</span></div>
+      <div class="shot" data-full="images/kd.webp" data-cap="口袋 · 后腰双后贴袋">
+        <img src="images/kd.webp" alt="口袋 · 后腰双后贴袋" loading="lazy" />
+        <span class="no">08</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 后袋车缝细节</span></div>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="ph-box"><span>实拍待补充</span></div>
       <div class="card-body">
         <h4>口袋<small>Pockets</small></h4>
         <p>口袋是一个方向、三个选项连在一起：袋口加拉链或保持无拉链，后袋做一个或两个。拉链 + 双后袋最实用，无拉链 + 单后袋最简洁运动；加拉链成本略高。</p>
