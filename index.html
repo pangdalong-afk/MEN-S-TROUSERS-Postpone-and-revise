@@ -136,6 +136,32 @@
     color:#fff;background:rgba(22,21,15,.8);padding:2px 8px;border-radius:999px;white-space:nowrap;
   }
 
+  /* ---------- case blocks ---------- */
+  .case-block{margin-bottom:clamp(36px,4.6vw,58px);}
+  .case-head{margin:0 0 clamp(16px,2.2vw,22px);}
+  .case-tag{display:inline-block;font-size:10.5px;letter-spacing:.2em;font-weight:800;color:var(--clay);margin-bottom:9px;}
+  .case-head h3{margin:0 0 7px;font-size:clamp(18px,2.05vw,23px);font-weight:800;letter-spacing:-.01em;}
+  .case-head p{margin:0;font-size:13.4px;color:var(--ink-2);max-width:86ch;}
+  .card.span2{grid-column:span 2;}
+  .card.span2 .card-body{padding:clamp(20px,2.4vw,30px);}
+  .card.span2 h4{font-size:16px;}
+  .card.span2 ul{margin:10px 0 0;padding-left:17px;color:var(--ink-2);font-size:13px;}
+  .card.span2 li{margin-bottom:6px;}
+  .card .comb{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:var(--ink-3);margin-bottom:9px;}
+  .shot.sq{aspect-ratio:1/1;}
+  .shot.fit{background:#f0eae0;}
+  .shot.fit img{object-fit:contain;}
+
+  /* ---------- placeholder shot ---------- */
+  .ph-box{
+    position:relative;aspect-ratio:3/4;width:100%;display:grid;place-items:center;
+    background:repeating-linear-gradient(45deg,#f3ede3,#f3ede3 12px,#eee7db 12px,#eee7db 24px);
+  }
+  .ph-box span{
+    font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);
+    background:rgba(255,255,255,.88);padding:7px 14px;border-radius:999px;
+  }
+
   /* ---------- extra card ---------- */
   .card.ghost{background:transparent;border:1px dashed #d3c8b6;align-items:center;justify-content:center;text-align:center;}
   .card.ghost:hover{transform:none;box-shadow:none;}
@@ -190,6 +216,7 @@
       <a href="#s1"><b>01</b>改面料改工艺</a>
       <a href="#s2"><b>02</b>改细节</a>
       <a href="#s3"><b>03</b>改版型</a>
+      <a href="#s4"><b>04</b>爆款延改实例</a>
     </nav>
   </div>
 </div>
@@ -342,8 +369,9 @@
       <p class="sub">版型与面料大体不动，只改局部工艺与配件（贴布绣、织带、腰头、裤脚等），上货最快、出错最少。基准款为军绿华夫格宽松长裤（松紧腰 + 白色抽绳），下面几个方向分别对应不同风格的男性客群。</p>
       <div class="chips">
         <span class="chip">织带</span><span class="chip">铆钉</span><span class="chip">贴布绣</span>
-        <span class="chip">抽绳</span><span class="chip">纽扣</span><span class="chip">裤脚</span>
-        <span class="chip">褶皱</span><span class="chip">线条</span><span class="chip">腰头</span>
+        <span class="chip">章仔</span><span class="chip">烫画</span><span class="chip">纽扣</span>
+        <span class="chip">抽绳</span><span class="chip">裤脚</span><span class="chip">腰头</span>
+        <span class="chip">口袋（拉链 / 无拉链 · 后袋 1–2 个）</span>
       </div>
     </div>
     <div class="head-meta">细节 · 工艺</div>
@@ -455,6 +483,33 @@
         <div class="kw"><span>双层腰头</span><span>酒红撞色</span><span>纯车缝工艺</span></div>
       </div>
     </article>
+    <article class="card">
+      <div class="ph-box"><span>实拍待补充</span></div>
+      <div class="card-body">
+        <h4>章仔<small>Badge</small></h4>
+        <p>袋口、裤脚或后腰缝一枚皮革 / 织唛章仔，车缝固定，是小面积提升质感与品牌感最省成本的做法；章仔可做撞色，也可压同色暗章。</p>
+        <div class="kw"><span>皮革 / 织唛</span><span>小面积点缀</span><span>成本低</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ph-box"><span>实拍待补充</span></div>
+      <div class="card-body">
+        <h4>烫画<small>Heat Transfer</small></h4>
+        <p>字母、图标直接烫印在裤身或袋位，没有车缝线、上身轻薄不硌；可做哑光或反光，反光款夜间辨识度高。</p>
+        <div class="kw"><span>哑光 / 反光</span><span>无车缝线</span><span>牢度需实测</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ph-box"><span>实拍待补充</span></div>
+      <div class="card-body">
+        <h4>口袋<small>Pockets</small></h4>
+        <p>口袋是一个方向、三个选项连在一起：袋口加拉链或保持无拉链，后袋做一个或两个。拉链 + 双后袋最实用，无拉链 + 单后袋最简洁运动；加拉链成本略高。</p>
+        <div class="kw"><span>拉链 / 无拉链</span><span>后袋 1 / 2 个</span><span>组合选用</span></div>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -582,11 +637,199 @@
   </div>
 </section>
 
+<!-- ============ 04 ============ -->
+<section class="chapter wrap" id="s4">
+  <div class="chapter-head">
+    <div class="num">04</div>
+    <div>
+      <h2>爆款延改实例</h2>
+      <p class="sub">前面三个大方向拆开看是单点改法，这一章把它们叠起来看：以一条现有长裤为起点，面料、腰头、裤脚、口袋同时动两到三处，落到成品是什么样。两组实例各用一条起点裤，组合方式不同、走向也完全不同。</p>
+      <div class="chips">
+        <span class="chip">面料 + 细节</span><span class="chip">细节 + 版型</span><span class="chip">三处叠加</span>
+        <span class="chip">同一起点 · 多走向</span>
+      </div>
+    </div>
+    <div class="head-meta">组合实例</div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-head">
+      <span class="case-tag">实例组 A · 6 个组合</span>
+      <h3>起点：铁锈红竖坑条宽松长裤</h3>
+      <p>宽罗纹松紧腰、无抽绳，宽松直筒、平口堆叠，侧缝插袋。下面 6 个实例都在它身上叠加改动，可以对照着看「换哪两处、整体气质会往哪走」。</p>
+    </div>
+    <div class="grid">
+    <article class="card">
+      <div class="shot sq" data-full="images/a1.webp" data-cap="华夫格 + 抽绳">
+        <img src="images/a1.webp" alt="华夫格 + 抽绳" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>华夫格 + 抽绳</h4>
+        <p>面料换华夫格组织，表面凹凸比原款坑条更明显；腰头由宽罗纹改成抽绳松紧，多一段可调余量。裤型保持宽松直筒平口，改动只落在面料与腰头两处。</p>
+        <div class="kw"><span>华夫格组织</span><span>抽绳腰头</span><span>只改两处</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot sq" data-full="images/a2.webp" data-cap="提花 + chino 腰头 + 皮标">
+        <img src="images/a2.webp" alt="提花 + chino 腰头 + 皮标" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>提花 + chino 腰头 + 皮标</h4>
+        <p>面料换带同色暗纹的提花，腰头改成 chino 结构（腰袢 + 门襟），右腿加一枚皮标。三处一起改，从运动休闲挪到可以通勤的休闲裤。</p>
+        <div class="kw"><span>同色暗纹</span><span>腰袢门襟</span><span>皮标点缀</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot sq" data-full="images/a3.webp" data-cap="大口袋 + 宽松">
+        <img src="images/a3.webp" alt="大口袋 + 宽松" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>大口袋 + 宽松</h4>
+        <p>裤腿再放宽一档，正面加两个大贴袋，口袋成为主视觉；宽松版型吃得下大口袋，不会显得鼓。适合往工装休闲的方向走。</p>
+        <div class="kw"><span>大贴袋</span><span>裤腿放宽</span><span>主视觉</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot sq" data-full="images/a4.webp" data-cap="灯笼裤 + 宽松">
+        <img src="images/a4.webp" alt="灯笼裤 + 宽松" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>灯笼裤 + 宽松</h4>
+        <p>裤腿蓬起、脚口收回，做成灯笼廓形，宽松量集中在小腿中段；同一条裤子的面料与配色都能沿用，只换纸样就能出这一版。</p>
+        <div class="kw"><span>灯笼廓形</span><span>脚口收口</span><span>只换纸样</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot sq" data-full="images/a5.webp" data-cap="小坑条 + 褶皱 + chino 腰头">
+        <img src="images/a5.webp" alt="小坑条 + 褶皱 + chino 腰头" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>小坑条 + 褶皱 + chino 腰头</h4>
+        <p>换更细的坑条，前中加褶裥把宽松量收在腰下，腰头配 chino 门襟；腰线更利落，塞衣摆或配短上衣都成立。</p>
+        <div class="kw"><span>细坑条</span><span>前中褶裥</span><span>腰线利落</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot sq" data-full="images/a6.webp" data-cap="亚麻 + 亚麻色">
+        <img src="images/a6.webp" alt="亚麻 + 亚麻色" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>亚麻 + 亚麻色</h4>
+        <p>面料换棉麻混纺、颜色换米白亚麻色，表面颗粒与自然皱感一并保留，直接切夏季度假场景。</p>
+        <div class="kw"><span>棉麻混纺</span><span>米白亚麻</span><span>夏季</span></div>
+      </div>
+    </article>
+
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-head">
+      <span class="case-tag">实例组 B · 4 个组合</span>
+      <h3>起点：蓝白格纹直筒长裤</h3>
+      <p>松紧腰配抽绳、平口裤脚、正面一个贴袋，家居休闲底色。这一组四个方向差别更大，用来说明同一个起点也能做出完全不同的品相。</p>
+    </div>
+    <div class="grid">
+    <article class="card">
+      <div class="shot " data-full="images/b1.webp" data-cap="纽扣腰 + 九分裤">
+        <img src="images/b1.webp" alt="纽扣腰 + 九分裤" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>纽扣腰 + 九分裤</h4>
+        <p>腰头换外露排扣，裤长收到九分；同一身格纹，从睡衣感变成可以穿出门的休闲裤，改动集中在腰头与裤长。</p>
+        <div class="kw"><span>外露排扣</span><span>九分长度</span><span>格纹休闲</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot " data-full="images/b2.webp" data-cap="铆钉 + 贴片">
+        <img src="images/b2.webp" alt="铆钉 + 贴片" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>铆钉 + 贴片</h4>
+        <p>侧缝纵向排金属铆钉贴片，裤腿保持宽松堆叠，是这一组里街头感最强的一版；铆钉与贴片需过拉力与洗水测试。</p>
+        <div class="kw"><span>纵向铆钉</span><span>侧缝贴片</span><span>街头感</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot " data-full="images/b3.webp" data-cap="牛奶丝 + 飘带">
+        <img src="images/b3.webp" alt="牛奶丝 + 飘带" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>牛奶丝 + 飘带</h4>
+        <p>面料换牛奶丝，表面带柔光、垂坠更明显；腰头改成侧边飘带系结，同一格纹换材质后观感完全变调。</p>
+        <div class="kw"><span>缎面柔光</span><span>飘带腰头</span><span>垂坠</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot " data-full="images/b4.webp" data-cap="背带裤">
+        <img src="images/b4.webp" alt="背带裤" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
+      </div>
+      <div class="card-body">
+        <span class="comb">组合实例</span>
+        <h4>背带裤</h4>
+        <p>加背带与金属调节扣，底布换更厚实的手感；结构件集中在肩带与前腰，裤身纸样基本不动，落地最快。</p>
+        <div class="kw"><span>背带金属扣</span><span>加厚底布</span><span>纸样改动小</span></div>
+      </div>
+    </article>
+
+      <article class="card span2">
+        <div class="card-body">
+          <span class="comb">用法建议</span>
+          <h4>两组实例怎么用：一次只动两到三处</h4>
+          <p>组合的价值在「叠加后的整体」，而不是把改动堆满。建议按这个顺序挑：先定面料（决定价格与手感），再定一处结构性改动（腰头或裤脚或版型），最后加一处小件（皮标、贴片、飘带）。</p>
+          <ul>
+            <li>只换面料 + 只加一处小件：改动最小、最快上货，适合先试水。</li>
+            <li>面料 + 版型同时改：视觉跨度最大，需要重新放码，开发周期长一点。</li>
+            <li>一处结构性改动（如 chino 腰头、背带）就足够拉开差异，不必再叠花活。</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="foot-in">
     <div>
       <h5>怎么用这份参考</h5>
-      <p>三个大方向不分先后，先挑一个顺手的切进去（换面料 / 加细节 / 改版型），再按预算从里面选 2–3 个具体方向做样，不用一次铺满。</p>
+      <p>三个大方向不分先后，先挑一个顺手的切进去（面料 / 细节 / 版型），再按预算选 2–3 个具体方向做样。想看叠加后是什么样，直接翻到「04 爆款延改实例」，那里是按成品效果排的组合示例。</p>
     </div>
     <div>
       <h5>开发提醒</h5>
