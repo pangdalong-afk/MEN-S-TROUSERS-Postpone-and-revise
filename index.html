@@ -149,8 +149,9 @@
   .card.span2 li{margin-bottom:6px;}
   .card .comb{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:var(--ink-3);margin-bottom:9px;}
   .shot.sq{aspect-ratio:1/1;}
-  .shot.fit{background:#f0eae0;}
+  .shot.fit{background:#f0eae0;aspect-ratio:5/8;}
   .shot.fit img{object-fit:contain;}
+  @media (max-width:680px){.shot.fit{aspect-ratio:3/4;}}
 
   /* ---------- placeholder shot ---------- */
   .ph-box{
@@ -655,8 +656,30 @@
   <div class="case-block">
     <div class="case-head">
       <span class="case-tag">实例组 A · 6 个组合</span>
-      <h3>起点：铁锈红竖坑条宽松长裤</h3>
-      <p>宽罗纹松紧腰、无抽绳，宽松直筒、平口堆叠，侧缝插袋。下面 6 个实例都在它身上叠加改动，可以对照着看「换哪两处、整体气质会往哪走」。</p>
+      <h3>原图起点：铁锈红竖坑条宽松长裤</h3>
+      <p>下面 6 个实例都从这条裤子出发，在它身上叠加改动，可以对照着看「换哪两处、整体气质会往哪走」。</p>
+    </div>
+
+    <div class="base">
+      <figure style="margin:0">
+        <div class="shot sq" data-full="images/oa.webp" data-cap="原图 · 铁锈红竖坑条宽松长裤">
+          <img src="images/oa.webp" alt="原图 铁锈红竖坑条宽松长裤" loading="lazy" />
+          <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+          <div class="lens"><span class="lens-badge">×3 坑条肌理</span></div>
+        </div>
+        <figcaption>原图 · 实例组 A 的起点</figcaption>
+      </figure>
+      <div class="base-copy">
+        <span class="tag">原图 · 起点款</span>
+        <h3>铁锈红竖坑条宽松长裤</h3>
+        <p>竖向坑条针织，颜色是偏暗的铁锈红。腰头为宽罗纹松紧、没有抽绳，裤腿宽松直筒、平口自然堆叠，两侧斜插袋。它本身已经是成品，下面每个实例都是从它身上改出来的。</p>
+        <dl class="spec-list">
+          <div><dt>廓形</dt><dd>宽松直筒 · 平口堆叠</dd></div>
+          <div><dt>腰头</dt><dd>宽罗纹松紧腰（无抽绳）</dd></div>
+          <div><dt>面料</dt><dd>竖向坑条针织 · 肌理连续</dd></div>
+          <div><dt>口袋</dt><dd>两侧斜插袋</dd></div>
+        </dl>
+      </div>
     </div>
     <div class="grid">
     <article class="card">
@@ -749,12 +772,34 @@
   <div class="case-block">
     <div class="case-head">
       <span class="case-tag">实例组 B · 4 个组合</span>
-      <h3>起点：蓝白格纹直筒长裤</h3>
-      <p>松紧腰配抽绳、平口裤脚、正面一个贴袋，家居休闲底色。这一组四个方向差别更大，用来说明同一个起点也能做出完全不同的品相。</p>
+      <h3>原图起点：蓝白格纹直筒长裤</h3>
+      <p>这一组四个方向差别更大，用来说明同一个起点也能做出完全不同的品相。</p>
+    </div>
+
+    <div class="base">
+      <figure style="margin:0">
+        <div class="shot fit" data-full="images/ob.webp" data-cap="原图 · 蓝白格纹直筒长裤">
+          <img src="images/ob.webp" alt="原图 蓝白格纹直筒长裤" loading="lazy" />
+          <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+          <div class="lens"><span class="lens-badge">×3 格纹细节</span></div>
+        </div>
+        <figcaption>原图 · 实例组 B 的起点</figcaption>
+      </figure>
+      <div class="base-copy">
+        <span class="tag">原图 · 起点款</span>
+        <h3>蓝白格纹直筒长裤</h3>
+        <p>蓝白水牛格，直筒偏宽松，松紧腰配同色抽绳，平口裤脚、正面一个贴袋，手感偏软，家居休闲底色。这一组改法跨度最大，从九分休闲一路做到背带裤。</p>
+        <dl class="spec-list">
+          <div><dt>廓形</dt><dd>直筒偏宽松 · 平口裤脚</dd></div>
+          <div><dt>腰头</dt><dd>松紧腰 + 同色抽绳</dd></div>
+          <div><dt>面料</dt><dd>蓝白格纹 · 手感偏软</dd></div>
+          <div><dt>口袋</dt><dd>正面一个贴袋</dd></div>
+        </dl>
+      </div>
     </div>
     <div class="grid">
     <article class="card">
-      <div class="shot " data-full="images/b1.webp" data-cap="纽扣腰 + 九分裤">
+      <div class="shot fit" data-full="images/b1.webp" data-cap="纽扣腰 + 九分裤">
         <img src="images/b1.webp" alt="纽扣腰 + 九分裤" loading="lazy" />
         <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
         <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
@@ -768,7 +813,7 @@
     </article>
 
     <article class="card">
-      <div class="shot " data-full="images/b2.webp" data-cap="铆钉 + 贴片">
+      <div class="shot fit" data-full="images/b2.webp" data-cap="铆钉 + 贴片">
         <img src="images/b2.webp" alt="铆钉 + 贴片" loading="lazy" />
         <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
         <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
@@ -782,7 +827,7 @@
     </article>
 
     <article class="card">
-      <div class="shot " data-full="images/b3.webp" data-cap="牛奶丝 + 飘带">
+      <div class="shot fit" data-full="images/b3.webp" data-cap="牛奶丝 + 飘带">
         <img src="images/b3.webp" alt="牛奶丝 + 飘带" loading="lazy" />
         <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
         <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
@@ -796,7 +841,7 @@
     </article>
 
     <article class="card">
-      <div class="shot " data-full="images/b4.webp" data-cap="背带裤">
+      <div class="shot fit" data-full="images/b4.webp" data-cap="背带裤">
         <img src="images/b4.webp" alt="背带裤" loading="lazy" />
         <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
         <div class="lens"><span class="lens-badge">×3 细节放大</span></div>
@@ -868,15 +913,23 @@
       lens.style.width = L + 'px';
       lens.style.height = L + 'px';
 
-      var bgW = r.width * ZOOM;
-      var bgH = r.height * ZOOM;
+      // 计算图片真实渲染框（兼容 contain / cover）
+      var nw = img.naturalWidth || r.width;
+      var nh = img.naturalHeight || r.height;
+      var contain = shot.classList.contains('fit');
+      var scl = contain ? Math.min(r.width / nw, r.height / nh) : Math.max(r.width / nw, r.height / nh);
+      var rw = nw * scl, rh = nh * scl;
+      var ox = (r.width - rw) / 2, oy = (r.height - rh) / 2;
+
+      var bgW = rw * ZOOM;
+      var bgH = rh * ZOOM;
       lens.style.backgroundImage = 'url("' + (shot.dataset.full || img.src) + '")';
       lens.style.backgroundSize = bgW + 'px ' + bgH + 'px';
-      var px = -(x * ZOOM - L / 2);
-      var py = -(y * ZOOM - L / 2);
+      var px = L / 2 - (x - ox) * ZOOM;
+      var py = L / 2 - (y - oy) * ZOOM;
       // 边界收敛，避免镜内出现空白
-      px = Math.min(0, Math.max(r.width - bgW, px));
-      py = Math.min(0, Math.max(r.height - bgH, py));
+      px = Math.min(0, Math.max(L - bgW, px));
+      py = Math.min(0, Math.max(L - bgH, py));
       lens.style.backgroundPosition = px + 'px ' + py + 'px';
 
       var lx = Math.min(Math.max(x - L / 2, 0), r.width - L);
