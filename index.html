@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>爆款延改 · 男士长裤改款思路参考</title>
+<style>
+  :root{
+    --paper:#f5f2ec;
+    --paper-2:#fffefb;
+    --ink:#16150f;
+    --ink-2:#575249;
+    --ink-3:#8b8478;
+    --line:#e0d8ca;
+    --clay:#a8492f;
+    --olive:#55613c;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.68;
+  }
+  ::selection{background:#eadbc9;}
+  .wrap{max-width:1340px;margin:0 auto;padding:0 clamp(18px,4vw,52px);}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:60;background:rgba(245,242,236,.9);
+    backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);
+  }
+  .topbar-in{max-width:1340px;margin:0 auto;padding:13px clamp(18px,4vw,52px);display:flex;align-items:center;gap:24px;}
+  .brand{font-size:12.5px;letter-spacing:.18em;font-weight:800;}
+  .brand span{color:var(--clay);font-weight:600;}
+  .nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
+  .nav a{font-size:12.5px;letter-spacing:.05em;text-decoration:none;color:var(--ink-2);padding:6px 12px;border-radius:999px;transition:.22s;}
+  .nav a:hover{color:#fff;background:var(--ink);}
+  .nav a b{color:var(--clay);font-weight:800;margin-right:5px;font-size:11px;}
+  .nav a:hover b{color:#e6b49f;}
+
+  /* ---------- hero ---------- */
+  .hero{border-bottom:1px solid var(--line);position:relative;overflow:hidden;}
+  .hero-in{
+    max-width:1340px;margin:0 auto;padding:clamp(52px,7.5vw,104px) clamp(18px,4vw,52px) clamp(34px,4.6vw,56px);
+  }
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.24em;color:var(--clay);font-weight:800;margin-bottom:24px;}
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--clay);}
+  h1{font-size:clamp(36px,5.6vw,68px);line-height:1.08;letter-spacing:-.025em;margin:0 0 24px;font-weight:800;}
+  h1 em{font-style:normal;color:var(--clay);}
+  .lede{font-size:clamp(14px,1.35vw,16px);color:var(--ink-2);max-width:62ch;margin:0;}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+    margin-top:clamp(32px,4vw,48px);border-top:1px solid var(--line);
+  }
+  .stat{padding:18px 22px 0 0;}
+  .stat + .stat{padding-left:22px;border-left:1px solid var(--line);}
+  .stat b{display:block;font-size:clamp(24px,3vw,34px);line-height:1.05;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+  .stat span{font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);}
+
+  /* ---------- chapter ---------- */
+  .chapter{scroll-margin-top:58px;padding:clamp(56px,7vw,92px) 0 0;}
+  .chapter-head{
+    display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,32px);
+    align-items:end;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:clamp(28px,4vw,40px);
+  }
+  .num{
+    font-size:clamp(34px,4.6vw,54px);font-weight:800;line-height:.9;letter-spacing:-.05em;
+    color:transparent;-webkit-text-stroke:1.3px var(--clay);
+  }
+  .chapter h2{margin:0 0 6px;font-size:clamp(22px,2.7vw,31px);letter-spacing:-.015em;font-weight:800;}
+  .chapter .sub{margin:0;color:var(--ink-2);font-size:14px;max-width:74ch;}
+  .head-meta{font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);white-space:nowrap;padding-bottom:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+  .chip{font-size:11.5px;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;letter-spacing:.02em;}
+
+  /* ---------- base / spec ---------- */
+  .base{
+    display:grid;grid-template-columns:minmax(0,372px) minmax(0,1fr);
+    gap:clamp(22px,3.6vw,46px);align-items:start;
+    background:var(--paper-2);border:1px solid var(--line);
+    padding:clamp(16px,2.2vw,24px);margin-bottom:clamp(26px,3.4vw,38px);
+  }
+  .base .shot{aspect-ratio:3/4;}
+  .base figcaption{margin-top:10px;font-size:11px;letter-spacing:.14em;color:var(--ink-3);text-align:center;}
+  .base-copy{padding-top:4px;}
+  .base-copy .tag{display:inline-block;font-size:10.5px;letter-spacing:.2em;font-weight:800;color:var(--clay);margin-bottom:10px;}
+  .base-copy h3{margin:0 0 10px;font-size:clamp(20px,2.2vw,25px);letter-spacing:-.01em;font-weight:800;}
+  .base-copy > p{margin:0 0 18px;color:var(--ink-2);font-size:13.6px;}
+  .spec-list{margin:0;border-top:1px solid var(--line);}
+  .spec-list > div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:14px;padding:9px 0;border-bottom:1px solid var(--line);}
+  .spec-list dt{font-size:11.5px;letter-spacing:.12em;color:var(--ink-3);}
+  .spec-list dd{margin:0;font-size:13px;color:var(--ink);}
+
+  /* ---------- grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.2vw,30px);}
+  .card{
+    background:var(--paper-2);border:1px solid var(--line);display:flex;flex-direction:column;
+    transition:box-shadow .32s,transform .32s,border-color .32s;
+  }
+  .card:hover{box-shadow:0 22px 44px -26px rgba(35,28,20,.42);border-color:#cfc4b2;transform:translateY(-2px);}
+  .card-body{padding:18px 19px 22px;}
+  .card h4{margin:0;font-size:17.5px;font-weight:800;letter-spacing:.005em;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+  .card h4 small{font-weight:500;font-size:10.5px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;}
+  .card p{margin:8px 0 0;font-size:13px;color:var(--ink-2);line-height:1.68;}
+  .card .kw{margin-top:13px;padding-top:11px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px;}
+  .card .kw span{font-size:11px;color:var(--olive);background:#eef0e5;border-radius:2px;padding:2px 7px;letter-spacing:.03em;}
+
+  /* ---------- image + magnifier ---------- */
+  .shot{position:relative;overflow:hidden;background:#ece6dc;aspect-ratio:3/4;width:100%;cursor:crosshair;user-select:none;}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover;transition:filter .35s;}
+  .shot.zooming img{filter:saturate(1.03);}
+  .shot .no{
+    position:absolute;top:10px;right:10px;font-size:10.5px;letter-spacing:.16em;
+    color:var(--ink-2);background:rgba(255,255,255,.86);padding:3px 9px;border-radius:999px;
+    backdrop-filter:blur(4px);font-variant-numeric:tabular-nums;
+  }
+  .shot .hint{
+    position:absolute;left:10px;bottom:10px;display:inline-flex;align-items:center;gap:6px;
+    background:rgba(22,21,15,.74);color:#fff;font-size:10.5px;letter-spacing:.08em;
+    padding:5px 10px;border-radius:999px;backdrop-filter:blur(3px);transition:opacity .3s,transform .3s;
+  }
+  .shot .hint svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:1.8;}
+  .shot.zooming .hint{opacity:0;transform:translateY(4px);}
+  .lens{
+    position:absolute;pointer-events:none;border-radius:50%;width:190px;height:190px;
+    border:2px solid rgba(255,255,255,.92);
+    box-shadow:0 10px 30px -8px rgba(0,0,0,.5), inset 0 0 0 1px rgba(0,0,0,.06);
+    background-repeat:no-repeat;opacity:0;transform:scale(.92);
+    transition:opacity .16s,transform .16s;will-change:background-position,transform;background-color:#e9e2d7;
+  }
+  .lens.on{opacity:1;transform:scale(1);}
+  .lens .lens-badge{
+    position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:10px;letter-spacing:.14em;
+    color:#fff;background:rgba(22,21,15,.8);padding:2px 8px;border-radius:999px;white-space:nowrap;
+  }
+
+  /* ---------- extra card ---------- */
+  .card.ghost{background:transparent;border:1px dashed #d3c8b6;align-items:center;justify-content:center;text-align:center;}
+  .card.ghost:hover{transform:none;box-shadow:none;}
+  .card.ghost .card-body{padding:28px 22px;}
+  .card.ghost h4{font-size:14.5px;color:var(--ink-2);justify-content:center;}
+  .card.ghost p{font-size:12.5px;color:var(--ink-3);margin-top:10px;}
+
+  /* ---------- lightbox ---------- */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(18,16,13,.95);display:none;align-items:center;justify-content:center;padding:clamp(12px,3vw,44px);}
+  .lb.open{display:flex;}
+  .lb figure{margin:0;max-width:min(92vw,780px);max-height:92vh;display:flex;flex-direction:column;gap:12px;}
+  .lb .lb-img-wrap{overflow:hidden;background:#111;max-height:78vh;display:flex;}
+  .lb img{display:block;max-width:100%;max-height:78vh;object-fit:contain;transition:transform .35s ease;transform-origin:center center;}
+  .lb img.zoomed{transform:scale(2.1);cursor:zoom-out;}
+  .lb figcaption{color:#e9e3d8;font-size:12.5px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;}
+  .lb figcaption span{color:#9a9186;font-size:11px;letter-spacing:.1em;}
+  .lb-close{
+    position:absolute;top:16px;right:20px;width:38px;height:38px;border-radius:50%;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;
+    font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;
+  }
+  .lb-close:hover{background:rgba(255,255,255,.2);}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:clamp(62px,8vw,104px);border-top:1px solid var(--line);background:var(--paper-2);}
+  .foot-in{max-width:1340px;margin:0 auto;padding:clamp(30px,4vw,48px) clamp(18px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,4vw,56px);}
+  .foot-in h5{margin:0 0 9px;font-size:11px;letter-spacing:.18em;color:var(--clay);font-weight:800;}
+  .foot-in p{margin:0;font-size:12.5px;color:var(--ink-3);line-height:1.8;}
+
+  @media (max-width:1040px){
+    .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:680px){
+    .grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:900px){
+    .hero-stats{grid-template-columns:1fr 1fr;}
+    .stat:nth-child(3){display:none;}
+    .base{grid-template-columns:1fr;}
+    .chapter-head{grid-template-columns:auto minmax(0,1fr);}
+    .head-meta{display:none;}
+    .lens{display:none;}
+    .shot{cursor:zoom-in;}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand">爆款延改 <span>/ MEN'S TROUSERS</span></div>
+    <nav class="nav">
+      <a href="#s1"><b>01</b>改面料改工艺</a>
+      <a href="#s2"><b>02</b>改细节</a>
+      <a href="#s3"><b>03</b>改版型</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="eyebrow">MEN'S TROUSERS · 男士长裤改款思路参考</div>
+    <h1>男士长裤，<br/>三个大方向，<br/><em>可落地</em>的改款参考</h1>
+    <p class="lede">以在售爆款男士长裤为基准款，把改款思路按「面料工艺」「细节工艺」「版型结构」三个大方向归到一起——三者是并列关系、不分先后，可以单点改，也可以叠着改。每个方向各自成立、能单独开款；做几条、先做哪条，按目标价格带和客群自己定。图片均可悬停 3 倍放大，查看面料肌理、缝线与配件细节。</p>
+    <div class="hero-stats">
+      <div class="stat"><b>03</b><span>改款大方向</span></div>
+      <div class="stat"><b>03</b><span>基准款参考</span></div>
+      <div class="stat"><b>×3</b><span>细节放大</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 ============ -->
+<section class="chapter wrap" id="s1">
+  <div class="chapter-head">
+    <div class="num">01</div>
+    <div>
+      <h2>改面料改工艺</h2>
+      <p class="sub">换面料是最低成本的差异化。基准款为粉色阔腿长裤，下面按面料类型给出可替换的肌理方向，每个方向各自成立、可以单独开款，按目标价格带挑几个做样即可。</p>
+      <div class="chips">
+        <span class="chip">坑条</span><span class="chip">提花</span><span class="chip">亚麻</span>
+        <span class="chip">塔丝隆</span><span class="chip">羊羔绒</span><span class="chip">牛奶丝</span>
+        <span class="chip">华夫格</span><span class="chip">灯芯绒</span><span class="chip">珠地布</span><span class="chip">网眼布</span>
+      </div>
+    </div>
+    <div class="head-meta">面料 · 工艺</div>
+  </div>
+
+  <div class="base">
+    <figure style="margin:0">
+      <div class="shot" data-full="images/orig.webp" data-cap="基准款 · 粉色阔腿长裤">
+        <img src="images/orig.webp" alt="基准款 粉色阔腿长裤" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 面料肌理</span></div>
+      </div>
+      <figcaption>BASE 01 · 换面料对照基准</figcaption>
+    </figure>
+    <div class="base-copy">
+      <span class="tag">BASE · 基准款</span>
+      <h3>粉色阔腿长裤</h3>
+      <p>超宽松阔腿，平口裤脚堆在鞋面；松紧腰配前中抽绳，两侧斜插袋。裤腿外侧各一条深粉竖条、内夹浅色细条，是这条裤子最强的记忆点。面料哑光厚实、表面微绒，垂感偏软。</p>
+      <dl class="spec-list">
+        <div><dt>廓形</dt><dd>超宽松阔腿 · 平口落地</dd></div>
+        <div><dt>腰头</dt><dd>松紧腰 + 前中抽绳</dd></div>
+        <div><dt>设计特征</dt><dd>侧边深粉双条纹 · 斜插袋</dd></div>
+        <div><dt>改款要点</dt><dd>换料同步复核克重与垂度，避免裤型塌陷；侧条纹绱缝方式随面料调整</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="shot" data-full="images/kentiao.webp" data-cap="坑条 · 竖向罗纹肌理">
+        <img src="images/kentiao.webp" alt="坑条面料改款" loading="lazy" />
+        <span class="no">01</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 坑条纹理</span></div>
+      </div>
+      <div class="card-body">
+        <h4>坑条<small>Rib</small></h4>
+        <p>通身竖向罗纹坑条，纹理立体、回弹好；同色系纵向拉长，显腿直、显裤型挺，哑光程度也比原款更"有料"。</p>
+        <div class="kw"><span>纹理立体</span><span>回弹好</span><span>显腿直</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/jacquard.webp" data-cap="提花 · 暗纹佩斯利">
+        <img src="images/jacquard.webp" alt="提花面料改款" loading="lazy" />
+        <span class="no">02</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 提花纹样</span></div>
+      </div>
+      <div class="card-body">
+        <h4>提花<small>Jacquard</small></h4>
+        <p>同色系暗纹佩斯利提花，光泽内敛，成本可控地把基础款做出"贵感"，适合走轻熟休闲与轻奢运动线。</p>
+        <div class="kw"><span>同色暗纹</span><span>轻奢感</span><span>克重偏高</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/linen.webp" data-cap="亚麻 · 棉麻颗粒感">
+        <img src="images/linen.webp" alt="亚麻面料改款" loading="lazy" />
+        <span class="no">03</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 麻感颗粒</span></div>
+      </div>
+      <div class="card-body">
+        <h4>亚麻<small>Linen</small></h4>
+        <p>换米色调 + 棉麻混纺，表面颗粒哑光、自然皱感，直接切夏季清爽场景。</p>
+        <div class="kw"><span>夏季</span><span>自然皱感</span><span>米咖色系</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/taslan.webp" data-cap="塔丝隆 · 微光顺滑">
+        <img src="images/taslan.webp" alt="塔丝隆面料改款" loading="lazy" />
+        <span class="no">04</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 微光表面</span></div>
+      </div>
+      <div class="card-body">
+        <h4>塔丝隆<small>Taslan</small></h4>
+        <p>尼龙塔丝隆平滑微光，垂坠顺滑、褶皱连续，运动感更强；裤身更"飘"，侧边条纹边缘也更清晰。</p>
+        <div class="kw"><span>微光</span><span>垂坠感</span><span>尼龙运动风</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/fleece.webp" data-cap="羊羔绒 · 蓬松保暖">
+        <img src="images/fleece.webp" alt="羊羔绒面料改款" loading="lazy" />
+        <span class="no">05</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 绒毛质感</span></div>
+      </div>
+      <div class="card-body">
+        <h4>羊羔绒<small>Fleece</small></h4>
+        <p>粉色羊羔绒蓬松保暖，秋冬氛围足；建议适度减薄 + 收窄裤腿，避免整条裤子显臃肿显粗。</p>
+        <div class="kw"><span>秋冬</span><span>蓬松保暖</span><span>注意显胖</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/milksilk.webp" data-cap="牛奶丝 · 粉色缎面光泽">
+        <img src="images/milksilk.webp" alt="牛奶丝面料改款" loading="lazy" />
+        <span class="no">06</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 缎面光泽</span></div>
+      </div>
+      <div class="card-body">
+        <h4>牛奶丝<small>Milk Silk</small></h4>
+        <p>同色缎面牛奶丝，柔光流动、垂坠冰凉；深粉侧条纹在光泽面料上更抢眼，一条裤子就从"休闲运动"切到"潮牌街拍"。</p>
+        <div class="kw"><span>缎面微光</span><span>垂坠冰凉</span><span>易勾丝需过针</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="chapter wrap" id="s2">
+  <div class="chapter-head">
+    <div class="num">02</div>
+    <div>
+      <h2>改细节</h2>
+      <p class="sub">版型与面料大体不动，只改局部工艺与配件（贴布绣、织带、腰头、裤脚等），上货最快、出错最少。基准款为军绿华夫格宽松长裤（松紧腰 + 白色抽绳），下面几个方向分别对应不同风格的男性客群。</p>
+      <div class="chips">
+        <span class="chip">织带</span><span class="chip">铆钉</span><span class="chip">贴布绣</span>
+        <span class="chip">抽绳</span><span class="chip">纽扣</span><span class="chip">裤脚</span>
+        <span class="chip">褶皱</span><span class="chip">线条</span><span class="chip">腰头</span>
+      </div>
+    </div>
+    <div class="head-meta">细节 · 工艺</div>
+  </div>
+
+  <div class="base">
+    <figure style="margin:0">
+      <div class="shot" data-full="images/d_orig.webp" data-cap="基准款 · 军绿华夫格宽松长裤">
+        <img src="images/d_orig.webp" alt="基准款 军绿华夫格长裤" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 华夫格肌理</span></div>
+      </div>
+      <figcaption>BASE 02 · 改细节对照基准</figcaption>
+    </figure>
+    <div class="base-copy">
+      <span class="tag">BASE · 基准款</span>
+      <h3>军绿华夫格宽松长裤</h3>
+      <p>华夫格针织，宽松直筒，松紧腰配白色抽绳，侧缝压线清晰，平口裤脚自然垂落盖住鞋面。休闲运动底色，可改的细节位很多。</p>
+      <dl class="spec-list">
+        <div><dt>廓形</dt><dd>宽松直筒 · 平口垂落</dd></div>
+        <div><dt>腰头</dt><dd>松紧腰 + 白色抽绳</dd></div>
+        <div><dt>面料</dt><dd>华夫格针织 · 凹凸颗粒肌理</dd></div>
+        <div><dt>改款要点</dt><dd>金属件（铆钉 / 纽扣）配色统一（银 / 黑 / 撞色），避免杂乱；贴布绣、织带等工艺件须过拉力与洗水测试</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="shot" data-full="images/d_patch.webp" data-cap="贴布绣 + 纽扣 · 年轻校园">
+        <img src="images/d_patch.webp" alt="贴布绣加纽扣改款" loading="lazy" />
+        <span class="no">01</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 贴布绣针脚</span></div>
+      </div>
+      <div class="card-body">
+        <h4>贴布绣 + 纽扣<small>Patch &amp; Button</small></h4>
+        <p>裤身加字母 / 徽章贴布绣，点缀彩色纽扣，年轻化、校园感强，适合学生与年轻客群。</p>
+        <div class="kw"><span>贴布绣</span><span>彩色纽扣</span><span>年轻化</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/d_rivet.webp" data-cap="铆钉 · 裤脚与袋口">
+        <img src="images/d_rivet.webp" alt="铆钉改款" loading="lazy" />
+        <span class="no">02</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 铆钉金属件</span></div>
+      </div>
+      <div class="card-body">
+        <h4>铆钉<small>Rivets</small></h4>
+        <p>裤脚一圈与袋口边缘打金属铆钉，街头摇滚感拉满，是最省版型成本的"变脸"方式。</p>
+        <div class="kw"><span>金属铆钉</span><span>街头摇滚</span><span>注意刮洗</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/d_webbing.webp" data-cap="织带 · 侧边撞色">
+        <img src="images/d_webbing.webp" alt="织带改款" loading="lazy" />
+        <span class="no">03</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 织带车缝</span></div>
+      </div>
+      <div class="card-body">
+        <h4>织带<small>Webbing</small></h4>
+        <p>米色底 + 黑色侧边织带、裤脚撞色包边，校服运动风，条纹语言与原爆款天然衔接。</p>
+        <div class="kw"><span>侧边织带</span><span>撞色包边</span><span>校服运动</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/d_button.webp" data-cap="纽扣腰 · 外露腰头">
+        <img src="images/d_button.webp" alt="纽扣腰改款" loading="lazy" />
+        <span class="no">04</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 腰头纽扣</span></div>
+      </div>
+      <div class="card-body">
+        <h4>纽扣腰<small>Button Waist</small></h4>
+        <p>松紧腰外露排扣，硬朗复古，腰头成为视觉重点；可拆成装饰扣，进一步压成本。</p>
+        <div class="kw"><span>外露排扣</span><span>复古硬朗</span><span>腰头重点</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/d_cuff.webp" data-cap="束脚口 · 罗纹收口">
+        <img src="images/d_cuff.webp" alt="束脚口改款" loading="lazy" />
+        <span class="no">05</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 罗纹束脚</span></div>
+      </div>
+      <div class="card-body">
+        <h4>束脚口<small>Cuffed Hem</small></h4>
+        <p>锥形收窄 + 罗纹束脚，收口利落、露脚踝显比例，运动属性更强，也更适合通勤跑量。</p>
+        <div class="kw"><span>罗纹束脚</span><span>锥形裤腿</span><span>运动风</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/d_waist.webp" data-cap="双腰头 · 腰侧露织带">
+        <img src="images/d_waist.webp" alt="双腰头改款" loading="lazy" />
+        <span class="no">06</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 双腰头层次</span></div>
+      </div>
+      <div class="card-body">
+        <h4>双腰头<small>Double Waistband</small></h4>
+        <p>双层腰头 + 腰侧露酒红织带，层次感与撞色点缀，靠车缝工艺实现，不增加金属件。</p>
+        <div class="kw"><span>双层腰头</span><span>酒红撞色</span><span>纯车缝工艺</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="chapter wrap" id="s3">
+  <div class="chapter-head">
+    <div class="num">03</div>
+    <div>
+      <h2>改版型</h2>
+      <p class="sub">基准款为米色亚麻阔腿长裤（抽绳松紧腰 + 两侧斜插袋）。同面料同颜色，只改纸样廓形，就能覆盖从紧身到超宽松的整条版型带，是拉长货架视觉跨度最有效的一招。</p>
+      <div class="chips">
+        <span class="chip">超宽松</span><span class="chip">紧身</span><span class="chip">哈伦裤</span>
+        <span class="chip">背带裤</span><span class="chip">灯笼裤</span><span class="chip">七分裤</span>
+      </div>
+    </div>
+    <div class="head-meta">版型 · 剪裁</div>
+  </div>
+
+  <div class="base">
+    <figure style="margin:0">
+      <div class="shot" data-full="images/p_orig.webp" data-cap="基准款 · 米色亚麻阔腿长裤">
+        <img src="images/p_orig.webp" alt="基准款 米色亚麻长裤" loading="lazy" />
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 麻料细节</span></div>
+      </div>
+      <figcaption>BASE 03 · 改版型对照基准</figcaption>
+    </figure>
+    <div class="base-copy">
+      <span class="tag">BASE · 基准款</span>
+      <h3>米色亚麻阔腿长裤</h3>
+      <p>棉麻混纺，宽松直筒微锥，抽绳松紧腰、两侧斜插袋，裤长接近脚踝、平口不卷边。度假休闲底色，廓形延展性强。</p>
+      <dl class="spec-list">
+        <div><dt>廓形</dt><dd>宽松直筒 · 脚踝处微收</dd></div>
+        <div><dt>腰头</dt><dd>松紧腰 + 白色抽绳</dd></div>
+        <div><dt>细节</dt><dd>两侧斜插袋 · 平口裤脚</dd></div>
+        <div><dt>改款要点</dt><dd>改紧身 / 哈伦需同步调整裆深与臀围余量；七分、灯笼款注意裤长与腿型比例</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="shot" data-full="images/p_oversize.webp" data-cap="超级宽松 · 超阔腿垂坠">
+        <img src="images/p_oversize.webp" alt="超级宽松版型" loading="lazy" />
+        <span class="no">01</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 垂坠褶皱</span></div>
+      </div>
+      <div class="card-body">
+        <h4>超级宽松<small>Oversized</small></h4>
+        <p>阔腿加宽、裤脚堆叠，垂坠与体量感并存，修饰腿型不挑身材，是目前最好卖的一条廓形。</p>
+        <div class="kw"><span>超阔腿</span><span>裤脚堆叠</span><span>修饰腿型</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/p_slim.webp" data-cap="紧身 · 九分窄脚">
+        <img src="images/p_slim.webp" alt="紧身版型" loading="lazy" />
+        <span class="no">02</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 缝线结构</span></div>
+      </div>
+      <div class="card-body">
+        <h4>紧身<small>Slim</small></h4>
+        <p>窄脚九分，收脚利落，强调腿部线条；麻料需加弹力或换梭织混纺，否则易起褶、易变形。</p>
+        <div class="kw"><span>九分窄脚</span><span>显腿长</span><span>需加弹力</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/p_harem.webp" data-cap="哈伦裤 · 上宽下收">
+        <img src="images/p_harem.webp" alt="哈伦裤版型" loading="lazy" />
+        <span class="no">03</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 收口结构</span></div>
+      </div>
+      <div class="card-body">
+        <h4>哈伦裤<small>Harem</small></h4>
+        <p>臀腿宽松、脚踝收口，上宽下收的对比显腿直，街头感强，适合做年轻人的差异款。</p>
+        <div class="kw"><span>上宽下收</span><span>脚踝收口</span><span>街头感</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/p_overall.webp" data-cap="背带裤 · 金属背带扣">
+        <img src="images/p_overall.webp" alt="背带裤版型" loading="lazy" />
+        <span class="no">04</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 背带扣件</span></div>
+      </div>
+      <div class="card-body">
+        <h4>背带裤<small>Overall</small></h4>
+        <p>加背带与金属扣，一衣多穿、可调长度；结构件少，版型改动集中在腰头，落地快。</p>
+        <div class="kw"><span>背带金属扣</span><span>可调长度</span><span>减龄</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/p_lantern.webp" data-cap="灯笼裤 · 小腿收口">
+        <img src="images/p_lantern.webp" alt="灯笼裤版型" loading="lazy" />
+        <span class="no">05</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 收口抽褶</span></div>
+      </div>
+      <div class="card-body">
+        <h4>灯笼裤<small>Lantern</small></h4>
+        <p>裤腿蓬松、小腿收口，做出有辨识度的廓形；麻料支撑度合适，但需控制蓬度避免显臃肿。</p>
+        <div class="kw"><span>蓬松裤腿</span><span>小腿收口</span><span>廓形差异化</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot" data-full="images/p_crop.webp" data-cap="七分裤 · 平口直筒">
+        <img src="images/p_crop.webp" alt="七分裤版型" loading="lazy" />
+        <span class="no">06</span>
+        <span class="hint"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>悬停放大细节</span>
+        <div class="lens"><span class="lens-badge">×3 裤脚工艺</span></div>
+      </div>
+      <div class="card-body">
+        <h4>七分裤<small>Cropped</small></h4>
+        <p>七分阔腿、平口不包边，露小腿更清爽；夏季铺货最稳，可与长裤做同款不同长。</p>
+        <div class="kw"><span>七分长度</span><span>平口裤脚</span><span>夏季主推</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div>
+      <h5>怎么用这份参考</h5>
+      <p>三个大方向不分先后，先挑一个顺手的切进去（换面料 / 加细节 / 改版型），再按预算从里面选 2–3 个具体方向做样，不用一次铺满。</p>
+    </div>
+    <div>
+      <h5>开发提醒</h5>
+      <p>换面料需同步复核克重、缩水率与洗后形态；铆钉、纽扣等金属件与贴布绣需过拉力与洗水测试；版型改动请以实际放码结果为准。</p>
+    </div>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
+  <figure>
+    <div class="lb-img-wrap"><img id="lbImg" src="" alt="" /></div>
+    <figcaption><span id="lbCap"></span><span>点击图片可再放大 · ESC 关闭</span></figcaption>
+  </figure>
+</div>
+
+
+<script>
+(function(){
+  var ZOOM = 3;
+  var lensSize = 190;
+
+  function initShot(shot){
+    var img = shot.querySelector('img');
+    var lens = shot.querySelector('.lens');
+    if(!lens) return;
+
+    function move(e){
+      var r = shot.getBoundingClientRect();
+      var x = e.clientX - r.left;
+      var y = e.clientY - r.top;
+      if(x < 0 || y < 0 || x > r.width || y > r.height) return;
+
+      var L = Math.min(lensSize, r.width * 0.72);
+      lens.style.width = L + 'px';
+      lens.style.height = L + 'px';
+
+      var bgW = r.width * ZOOM;
+      var bgH = r.height * ZOOM;
+      lens.style.backgroundImage = 'url("' + (shot.dataset.full || img.src) + '")';
+      lens.style.backgroundSize = bgW + 'px ' + bgH + 'px';
+      var px = -(x * ZOOM - L / 2);
+      var py = -(y * ZOOM - L / 2);
+      // 边界收敛，避免镜内出现空白
+      px = Math.min(0, Math.max(r.width - bgW, px));
+      py = Math.min(0, Math.max(r.height - bgH, py));
+      lens.style.backgroundPosition = px + 'px ' + py + 'px';
+
+      var lx = Math.min(Math.max(x - L / 2, 0), r.width - L);
+      var ly = Math.min(Math.max(y - L / 2, 0), r.height - L);
+      lens.style.left = lx + 'px';
+      lens.style.top = ly + 'px';
+    }
+
+    shot.addEventListener('mouseenter', function(e){
+      shot.classList.add('zooming');
+      lens.classList.add('on');
+      move(e);
+    });
+    shot.addEventListener('mousemove', move);
+    shot.addEventListener('mouseleave', function(){
+      shot.classList.remove('zooming');
+      lens.classList.remove('on');
+    });
+  }
+
+  var shots = document.querySelectorAll('.shot');
+  Array.prototype.forEach.call(shots, function(s){
+    initShot(s);
+    s.addEventListener('click', function(){
+      openLB(s.dataset.full || s.querySelector('img').src, s.dataset.cap || '');
+    });
+  });
+
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+
+  function openLB(src, cap){
+    lbImg.src = src;
+    lbImg.classList.remove('zoomed');
+    lbImg.style.transformOrigin = 'center center';
+    lbCap.textContent = cap;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLB(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lbImg.addEventListener('click', function(e){
+    if(lbImg.classList.contains('zoomed')){
+      lbImg.classList.remove('zoomed');
+      return;
+    }
+    var r = lbImg.getBoundingClientRect();
+    var ox = ((e.clientX - r.left) / r.width) * 100;
+    var oy = ((e.clientY - r.top) / r.height) * 100;
+    lbImg.style.transformOrigin = ox + '% ' + oy + '%';
+    lbImg.classList.add('zoomed');
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLB);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLB(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLB(); });
+})();
+</script>
+</body>
+</html>
